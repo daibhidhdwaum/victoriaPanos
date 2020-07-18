@@ -1,0 +1,268 @@
+/* font-family: 'Playfair Display', serif;
+
+    font-family: 'Quicksand', sans-serif; */
+
+/* default styling */
+html {
+  font-size: 62.5%;
+}
+
+*,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+img,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* styling */
+
+/* page */
+section,
+.headerContainer {
+  margin: 0 5%;
+}
+
+.imageContainer {
+  width: 100%;
+}
+
+/* header */
+
+header,
+footer {
+  background-color: #143857;
+}
+
+.headerContainer,
+footer {
+  display: flex;
+}
+
+.headerContainer {
+  height: 20rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1,
+h2,
+a,
+footer p {
+  color: rgb(230, 230, 240);
+}
+
+h1,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+}
+
+h2 {
+  font-family: "Quicksand", sans-serif;
+}
+
+h3 {
+  font-size: 2.6rem;
+  margin: 1.5rem 0;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+p,
+a,
+label {
+  font-family: "Open sans", sans-serif;
+  font-size: 1.6rem;
+}
+
+p {
+  line-height: 2.4rem;
+  font-weight: 400;
+}
+
+/* gallery */
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.galleryImage {
+  z-index: -1;
+}
+
+.galleryImageContainer {
+  position: relative;
+}
+
+.galleryHover {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  /* transition: ease-in .3s; */
+}
+
+.galleryHover:hover {
+  background-color: rgba(230, 230, 240, 0.6);
+  visibility: visible;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.imageInfoContainer {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+}
+
+.imageInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  color: transparent;
+  padding: 2%;
+}
+
+/* CSS HOVER */
+.galleryHover:hover > .imageInfoContainer > .imageInfo {
+  color: rgba(230, 230, 240, 1);
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 80%;
+  width: 100%;
+  transition: 0.8s;
+  visibility: visible;
+
+}
+
+/* contact */
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  margin: 4rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  grid-template-areas:
+    "name"
+    "email"
+    "message"
+    "button";
+}
+
+textarea {
+  resize: none;
+  height: 12rem;
+  padding: 2rem;
+}
+
+textarea,
+input {
+  border: 1px solid #143857;
+  font-size: 1.6rem;
+}
+
+.formName {
+  grid-area: name;
+}
+
+.formEmail {
+  grid-area: email;
+}
+
+.formMessage {
+  grid-area: message;
+}
+
+.formButton {
+  grid-area: button;
+}
+
+input,
+button {
+  padding: 1rem 1.5rem;
+}
+
+button {
+  font-size: 1.6rem;
+  max-width: 20rem;
+  border: 4px solid #143857;
+  background-color: #143857;
+  color: rgb(230, 230, 240);
+}
+
+button:hover {
+  background-color: rgb(230, 230, 240);
+  color: #143857;
+  transition: ease-in-out 0.4s;
+}
+
+/* footer */
+footer {
+  height: 10rem;
+  justify-content: center;
+  align-items: flex-end;
+}
+footer p {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media (min-width: 420px){
+    .galleryHover:hover > .imageInfoContainer > .imageInfo{
+        height: 40%;
+    }
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

@@ -4,71 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&family=Quicksand:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/normalize.css">
+    <!-- <link rel="stylesheet" href="./assets/css/stellarnav.css"> -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Victoria Panos</title>
 </head>
 
 <body>
     <header>
-        <h1>Victoria Panos</h1>
-        <h2>Illustration and Graphic Design</h2>
+        <div class="wrapper">
+            <div class="headerContainer">
+                <h1>Victoria Panos</h1>
+                <h2>Illustration and Graphic Design</h2>
 
-        <ul>
-            <li>About</li>
-            <li>Work</li>
-            <li>Contact</li>
-        </ul>
+                <nav class="stellarnav">
+                    <ul>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#work">Work</a></li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
     <!-- HEADER ENDS -->
 
-    <section>
-        <div class="imageContainer">
-            <img src="./assets/images/me/drawingTable.jpg" alt="Illustration of Victoria Panos working at her drawing desk">
+
+    <section id="work">
+        <div class="wrapper">
+
+            <h3>Work</h3>
+
+            <div class="gallery">
+                <!-- GALLERY IMAGES WILL DISPLAY HERE -->
+            </div>
         </div>
-        <h3>About Me</h3>
-        <p>
-            Victoria Panos is an illustrator and designer born and raised in Toronto. She loves the tactile aspects of
-            traditional
-            art, and enjoys blending that with the versatility of digital media. In addition to graphic work, she also
-            designs
-            apparel and hats, and directs the country's hottest handbell ensemble.
-        </p>
-        <p>
-            She lives in the east end with two large cats and a small dog.
-        </p>
-    </section>
-    <!-- ABOUT SECTION ENDS -->
-    <section>
-        <h3>Work</h3>
     </section>
     <!-- WORK SECTION ENDS -->
 
-    <section>
-        <h3>Contact</h3>
-        <div class="imageContainer">
-            <img src="./assets/images/me/cardFace.jpg" alt="Playing card illustration">
+    <section id="about">
+        <div class="wrapper">
+            <div class="imageContainer">
+                <img src="./assets/images/me/drawingTable.jpg"
+                    alt="Illustration of Victoria Panos working at her drawing desk">
+            </div>
+            <h3>About Me</h3>
+            <p>
+                Victoria Panos is an illustrator and designer born and raised in Toronto. She loves the tactile aspects
+                of
+                traditional
+                art, and enjoys blending that with the versatility of digital media. In addition to graphic work, she
+                also
+                designs
+                apparel and hats, and directs the country's hottest handbell ensemble.
+            </p>
+            <br>
+            <p>
+                She lives in the east end with two large cats and a small dog.
+            </p>
         </div>
-        <p>Have a question? Want to say hello? Send a message!</p>
-        <ul>
-            <li>email: someperson@mail.com</li>
-        </ul>
+    </section>
+    <!-- ABOUT SECTION ENDS -->
 
-        <form action="https://formspree.io/xlepopey" method="POST">
-            <label>
-                Name
-                <input type="text" name="_replyto">
-            </label>
-            <label>
-                Email:
-                <input type="text" name="_replyto">
-            </label>
-            <label>
-                Message:
-                <textarea name="message"></textarea>
-            </label>
-            <button type="submit">Send</button>
-        </form>
+    <section id="contact">
+        <div class="wrapper">
+            <h3>Contact</h3>
+            <div class="imageContainer">
+                <img src="./assets/images/me/cardFace.jpg" alt="Playing card illustration">
+            </div>
+            <p>Have a question? Want to say hello? Send a message!</p>
+
+            <form action="https://formspree.io/xlepopey" method="POST">
+
+                <label for="name"><p>Name</p>
+
+                    <input type="text" name="name" id="name" class="formName" required>
+                </label>
+                <label for="_replyto"><p>Email</p>
+                    <input type="text" name="_replyto" id="_replyto" class="formEmail" required>
+                </label>
+                <label for="message"><p>Message</p>
+                    <textarea name="message" class="formMessage" id="message" required></textarea>
+                </label>
+                <button type="submit" class="button">Send</button>
+            </form>
+        </div>
     </section>
 
     <footer>
@@ -77,6 +105,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"
         integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="js/stellarnav.js"></script> -->
     <script src="./assets/javascript/app.js"></script>
 </body>
 
