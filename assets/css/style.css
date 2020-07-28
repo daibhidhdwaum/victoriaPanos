@@ -59,10 +59,12 @@ a {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding: 2rem;
-  /* margin: 5rem; */
-  top: 0;
-  left: 0;
-  width: 100%; /* Full width */
+  margin: 10% auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100%); /* Full width */
+  max-width: 80rem;
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
@@ -73,7 +75,6 @@ a {
 /* Modal Content/Box */
 .modalContent {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 100%; /* Could be more or less, depending on screen size */
@@ -135,17 +136,17 @@ header {
 
 .navbar {
   position: absolute;
-  z-index: -10;
+  /* z-index: -10; */
   width: 100%;
 }
 
 header .imageContainer {
-  max-width: 40%;
+  max-width: 17.5rem;
   margin: 1.5rem 0;
 }
 
 section {
-  margin: 10% 0;
+  padding: 5rem 0;
 }
 
 body {
@@ -223,7 +224,7 @@ h3 {
 }
 
 nav {
-  height: 15rem;
+  height: 20rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -231,7 +232,7 @@ nav {
 }
 
 .navbar {
-  top: 15rem;
+  top: 20rem;
   left: 0;
   width: 100%;
   background-color: rgba(230, 230, 240, 1);
@@ -240,12 +241,23 @@ nav {
 }
 
 .navbar li {
-  margin: 2rem 0.5rem;
   text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 .navbar li a {
+  display: inline-block;
   color: black;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0.5rem;
+  border: 1px solid rgba(230, 230, 240, 1);
+}
+
+.navbar li a:hover,
+.navbar li a:focus-within {
+  border: 1px solid #143857;
 }
 
 .navbarActive {
@@ -326,6 +338,10 @@ p {
 
 /* contact */
 
+.pageHeroImage.contactHero img {
+  border-radius: 2rem;
+}
+
 label {
   display: flex;
   flex-direction: column;
@@ -403,6 +419,7 @@ footer ul {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+  max-width: 50rem;
 }
 
 footer ul li {
@@ -422,6 +439,32 @@ footer p {
 }
 
 @media (min-width: 768px) {
+  .navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+  }
+
+  .navbar li a {
+    color: rgb(230, 230, 240);
+    border: 1px solid #143857;
+    padding: 0.5rem 0;
+  }
+
+  .navbar li a:hover,
+  .navbar li a:focus-within {
+    border: 1px solid rgb(230, 230, 240);
+  }
+
+  .burger {
+    display: none;
+  }
+
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -434,13 +477,24 @@ footer p {
     width: 40%;
   }
 
+  .modal .imageContainer {
+    width: 100%;
+  }
+
+  .modalContent {
+    display: flex;
+  }
+
+  header .imageContainer {
+    width: 100%;
+  }
+
   .aboutMeHero {
     margin: 5%;
   }
 
   .contactHero {
     margin-left: 3%;
-    border-radius: 25%;
   }
 
   .writtenContent {

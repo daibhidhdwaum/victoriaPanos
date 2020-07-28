@@ -158,6 +158,7 @@ portfolio.smoothScroll = () => {
       ) {
         // Figure out element to scroll to
         let target = $(this.hash);
+        // GET HEIGHT OF FIXED HEADER TO SET PAGE OFFSET
         const headerHeight = $("header").height();
 
         target = target.length
@@ -175,7 +176,7 @@ portfolio.smoothScroll = () => {
             function () {
               // Callback after animation
               // Must change focus!
-              var $target = $(target);
+              const $target = $(target);
               $target.focus();
               if ($target.is(":focus")) {
                 // Checking if the target was focused
@@ -227,9 +228,15 @@ portfolio.changeImage = (arr) => {
 
 // DISPLAY SELECTED IMAGE DETAILS
 portfolio.imageDetailsPage = () => {
-  // grab image that has been clicked
+  // GRAB ID OF IMAGE THAT HAS BEEN CLICKED
   $(".galleryImageContainer").on("click", (e) => {
-    const num = e.target.offsetParent.id;
+    let num;
+    if (e.target.id) {
+      num = e.target.id;
+    } else {
+      num = e.target.offsetParent.id;
+    }
+
     const id = parseInt(num);
     const images = portfolio.galleryImages;
     let name;
@@ -283,7 +290,7 @@ portfolio.modal = () => {
     $(".modalWrittenContent").empty();
   });
 
-  // When the user clicks anywhere outside of the modal, close it
+  // wHEN THE USER CLICKS OUTSIDE THE MODAL, CLOSE
   $("window").on("click", (e) => {
     if (event.target == modal) {
       modal.css("display", "none");
@@ -297,7 +304,7 @@ portfolio.modal = () => {
 // DISPLAY MAIN IMAGES ON PAGE
 portfolio.galleryDisplay = () => {
   const images = portfolio.galleryImages;
-  // loop over images array and append them to the gallery
+  // LOOP OVER THE IMAGES IN THE ARRAY AND APPEND
   for (let i = 0; i < images.length; i++) {
     $(".gallery").append(`
     <div class="galleryImageContainer">
@@ -314,9 +321,7 @@ portfolio.galleryDisplay = () => {
 
         `);
   }
-  // $(".galleryImageContainer").on("click", (e) => {
   portfolio.imageDetailsPage();
-  // });
 };
 
 portfolio.init = () => {
