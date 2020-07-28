@@ -141,7 +141,7 @@ header {
 
 header .vpLogo {
   max-width: 17.5rem;
-  max-width: 18rem;
+  max-height: 18rem;
   margin: 1.5rem 0;
 }
 
