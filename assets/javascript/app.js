@@ -2,103 +2,328 @@ const portfolio = {};
 
 portfolio.galleryImages = [
   {
+    id: 1,
     name: "Burleque Quarterly",
     description: "Editorial design",
-    src: `./assets/images/square/bqSquare.jpg`,
-    alt: "Burlesque show poster",
+    image: [
+      { id: 0, src: `./assets/images/square/bqSquare.jpg`, alt: "" },
+      { id: 1, src: `./assets/images/bq/bqCover.jpg`, alt: "" },
+      { id: 2, src: `./assets/images/bq/bqMagazine.jpg`, alt: "" },
+    ],
+    detail:
+      "<p>Magazine design and art direction.</p><p> Photography by Van Habon, models Loretta Jean and Henrietta VIII</p>",
   },
   {
+    id: 2,
     name: "Cabriole",
     description: "Art nouveau poster",
-    src: `./assets/images/square/cabrioleSquare.jpg`,
-    alt: "",
+    image: [
+      { id: 0, src: `./assets/images/square/cabrioleSquare.jpg`, alt: "" },
+    ],
+    detail: "",
   },
   {
+    id: 3,
     name: "Chihuahua",
     description: "Infographic",
-    src: `./assets/images/square/chihuahua.jpg`,
+    image: [{ id: 0, src: `./assets/images/square/chihuahua.jpg`, alt: "" }],
     alt: "",
+    detail: "",
   },
   {
+    id: 4,
     name: "The Colour of Magic",
     description: "Book cover design",
-    src: `./assets/images/square/colourOfMagicSquare.jpg`,
-    alt: "",
+    image: [
+      { id: 0, src: `./assets/images/square/colourOfMagicSquare.jpg`, alt: "" },
+    ],
+    detail: "",
   },
   {
+    id: 5,
     name: "The Etomology of Entomology",
     description: "Book design",
-    src: `./assets/images/square/entomologySquare.jpg`,
-    alt: "",
+    image: [
+      { id: 0, src: `./assets/images/square/entomologySquare.jpg`, alt: "" },
+    ],
+    detail: "<p>A new cover design for a classic novel.</p>",
   },
   {
+    id: 6,
     name: "March Hare",
     description: "Branding and package design",
-    src: `./assets/images/square/marchSquare.jpg`,
+    image: [
+      { id: 0, src: `./assets/images/square/marchSquare.jpg`, alt: "alt text" },
+      { id: 1, src: `./assets/images/marchHare/marchChai.jpg`, alt: "" },
+      { id: 2, src: `./assets/images/marchHare/marchEarlGrey.jpg`, alt: "" },
+      { id: 3, src: `./assets/images/marchHare/marchGreen.jpg`, alt: "" },
+      { id: 4, src: `./assets/images/marchHare/marchRooibos.jpg`, alt: "" },
+      { id: 5, src: `./assets/images/marchHare/marchHareMockup.jpg`, alt: "" },
+    ],
     alt: "",
+    detail:
+      "<p>Branding and packaging for a tea company, with original illustrated logo.</p>",
   },
   {
+    id: 7,
     name: "Saturnalia",
     description: "Event poster",
-    src: `./assets/images/square/saturnaliaSquare.jpg`,
-    alt: "",
+    image: [
+      { id: 0, src: `./assets/images/square/saturnaliaSquare.jpg`, alt: "" },
+    ],
+    detail:
+      "<p>A hand-illustrated poster inspired by the Art Nouveau movement.</p><p>Model: Loretta Jean.</p>",
   },
   {
+    id: 8,
     name: "Sirensong",
     description: "Illustration",
-    src: `./assets/images/square/sirenSquare.jpg`,
-    alt: "",
+    image: [{ id: 0, src: `./assets/images/square/sirenSquare.jpg`, alt: "" }],
+    detail: "",
   },
   {
+    id: 9,
     name: "Soaperific",
     description: "Logo and label design",
-    src: `./assets/images/square/soaperificJarSquare.jpg`,
-    alt: "",
+    image: [
+      { id: 0, src: `./assets/images/square/soaperificJarSquare.jpg`, alt: "" },
+      { id: 1, src: `./assets/images/soaperific/soaperificJar.jpg`, alt: "" },
+      { id: 2, src: `./assets/images/soaperific/soaperificLogo.png`, alt: "" },
+    ],
+    detail: "Design for an independent skincare company.",
   },
   {
+    id: 10,
     name: "Sparrow Queen Tarot",
     description: "Logo and branding",
-    src: `./assets/images/square/sparrow.jpg`,
-    alt: "",
+    image: [
+      { id: 0, src: `./assets/images/square/sparrow.jpg`, alt: "" },
+      { id: 1, src: `./assets/images/sparrow/sparrowqueenMockup.jpg`, alt: "" },
+      { id: 2, src: `./assets/images/sparrow/sqCoa.jpg`, alt: "" },
+      { id: 3, src: `./assets/images/sparrow/sqEnamel.png`, alt: "" },
+      { id: 4, src: `./assets/images/sparrow/sqEordmark.jpg`, alt: "" },
+      { id: 5, src: `./assets/images/sparrow/sqTote.jpg`, alt: "" },
+    ],
+    detail:
+      '<p>Logo and branding for a personal tarot reading service.</p><p>Hand-drawn "coat of arms" version plus wordmark with hand-crafted typeface.</p>',
   },
   {
+    id: 11,
     name: "Stupid Buck",
     description: "Illustration",
-    src: `./assets/images/square/ysfdeerSquare.jpg`,
-    alt: "",
+    image: [{ id: 0, src: `./assets/images/square/ysfdeerSquare.jpg`, id: "" }],
+    detail: "<p>Traditional illustration, done with markers.</p>",
   },
   {
+    id: 12,
     name: "Toronto Zoo",
     description: "Billboard design",
-    src: `./assets/images/square/zooBillboardSquare.jpg`,
-    alt: "",
+    image: [
+      { id: 0, src: `./assets/images/square/zooBillboardSquare.jpg`, alt: "" },
+      { id: 1, src: `./assets/images/ad/zooBillboard.jpg`, alt: "" },
+      { id: 2, src: `./assets/images/ad/zooBus.jpg`, alt: "" },
+    ],
+    detail: "",
   },
 ];
 
-// function to display images on page
+// NAVIGATION SLIDER
+portfolio.navSlide = () => {
+  const burger = $(".burger");
+  const nav = $(".navbar");
+  const li = $(".navbar li");
+
+  burger.on("click", () => {
+    nav.toggleClass("navbarActive");
+  });
+
+  li.on("click", () => {
+    nav.removeClass("navbarActive");
+  });
+};
+
+// SMOOTH SCROLL FUNCTION
+portfolio.smoothScroll = () => {
+  // Select all links with hashes
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function (event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, "") ==
+          this.pathname.replace(/^\//, "") &&
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        let target = $(this.hash);
+        const headerHeight = $("header").height();
+
+        target = target.length
+          ? target
+          : $("[name=" + this.hash.slice(1) + "]");
+
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $("html, body").animate(
+            {
+              scrollTop: target.offset().top - headerHeight,
+            },
+            1000,
+            function () {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) {
+                // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              }
+            }
+          );
+        }
+      }
+    });
+};
+
+// LOOP OVER AND DISPLAY ALTERNATIVE IMAGES
+portfolio.altImageLoop = (src) => {
+  const altImageArray = [];
+
+  for (let i = 0; i < src.length; i++) {
+    const altImageSrc = src[i];
+    altImageArray.push(altImageSrc);
+    // APPEND IMAGES TO PAGE
+    $(".altImages").append(`
+    <div class="imageContainer">
+    <img src=${altImageSrc.src} alt="" class="altImage" id=${altImageSrc.id} />
+    </div>`);
+  }
+  portfolio.changeImage(altImageArray);
+};
+
+// CHANGE IMAGE IN MODAL
+portfolio.changeImage = (arr) => {
+  $(".altImage").on("click", (e) => {
+    e.preventDefault();
+    imageID = e.target.id;
+    for (let i = 0; i < arr.length; i++) {
+      if (imageID == arr[i].id) {
+        image = arr[i];
+        $(".mainProductImage").empty().append(
+          `<div class="imageContainer">
+          <img src=${image.src} alt="" class="altImage" id=${image.id} />
+          </div>`
+        );
+      }
+    }
+  });
+};
+
+// DISPLAY SELECTED IMAGE DETAILS
+portfolio.imageDetailsPage = () => {
+  // grab image that has been clicked
+  $(".galleryImageContainer").on("click", (e) => {
+    const num = e.target.offsetParent.id;
+    const id = parseInt(num);
+    const images = portfolio.galleryImages;
+    let name;
+    let description;
+    let mainImage;
+    let src;
+    let alt;
+
+    // LOOP OVER AND GRAB INFO
+    for (let i = 0; i < images.length; i++) {
+      if (id == images[i].id) {
+        name = images[i].name;
+        description = images[i].description;
+        mainImage = images[i].image[0].src;
+        src = images[i].image;
+        alt = images[i].alt;
+        detail = images[i].detail;
+      }
+    }
+
+    // APPEND THE GATHERED INFO
+    $(".mainProductImage").append(`<img src=${mainImage} alt="" />`);
+    portfolio.altImageLoop(src);
+    $(".modalWrittenContent").append(
+      `<h4>${name}</h4>
+      <h5>${description}</h5>
+      <div>${detail}</div>`
+    );
+  });
+};
+
+// INITIATE MODAL TO DISPLAY IMAGE DETAILS
+portfolio.modal = () => {
+  // GET THE MODAL AND IMAGE CLICKED
+  const modal = $("#modal");
+  const btn = $(".galleryImageContainer");
+
+  // Get the <span> element that closes the modal
+  const span = $(".close");
+
+  // When the user clicks on the button, open the modal
+  btn.on("click", () => {
+    modal.css("display", "block");
+  });
+
+  // When the user clicks on <span> (x), close the modal
+  span.on("click", () => {
+    modal.css("display", "none");
+    $(".mainProductImage").empty();
+    $(".altImages").empty();
+    $(".modalWrittenContent").empty();
+  });
+
+  // When the user clicks anywhere outside of the modal, close it
+  $("window").on("click", (e) => {
+    if (event.target == modal) {
+      modal.css("display", "none");
+      $(".mainProductImage").empty();
+      $(".altImages").empty();
+      $(".modalWrittenContent").empty();
+    }
+  });
+};
+
+// DISPLAY MAIN IMAGES ON PAGE
 portfolio.galleryDisplay = () => {
   const images = portfolio.galleryImages;
-
   // loop over images array and append them to the gallery
   for (let i = 0; i < images.length; i++) {
     $(".gallery").append(`
     <div class="galleryImageContainer">
-    <img src=${images[i].src} alt=${images[i].alt} class="galleryImage">
-    <div class="galleryHover">
-     <div class="imageInfoContainer">
-         <div class="imageInfo">
-          <h4>${images[i].name}</h4>
-          <p>${images[i].description}</p>
+      <img src=${images[i].image[0].src} alt=${images[i].alt} class="galleryImage" />
+      <div class="galleryHover" id=${images[i].id}>
+        <div class="imageInfoContainer">
+          <div class="imageInfo">
+            <h4>${images[i].name}</h4>
+            <p>${images[i].description}</p>
+          </div>
         </div>
       </div>
     </div>
+
         `);
   }
+  // $(".galleryImageContainer").on("click", (e) => {
+  portfolio.imageDetailsPage();
+  // });
 };
 
 portfolio.init = () => {
-  // $(".stellarnav").stellarNav();
   portfolio.galleryDisplay();
+  portfolio.navSlide();
+  portfolio.smoothScroll();
+  portfolio.modal();
 };
 
 $(() => {
