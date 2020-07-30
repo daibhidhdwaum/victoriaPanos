@@ -112,7 +112,7 @@ body {
 
 .altImages img,
 .mainProductImage img {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .altImages:hover {
@@ -142,7 +142,6 @@ header {
 
 .navbar {
   position: absolute;
-  /* z-index: -10; */
   width: 100%;
   display: none;
 }
