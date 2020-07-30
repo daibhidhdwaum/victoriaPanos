@@ -51,7 +51,7 @@ a {
 .modal {
   display: none;
   position: fixed; /* Stay in place */
-  z-index: 2; /* Sit on top */
+  z-index: 30; /* Sit on top */
   padding: 2rem;
   margin: 3% auto;
   top: 50%;
@@ -170,6 +170,8 @@ section:nth-child(even) {
 header {
   width: 100%;
   top: 0;
+  position: relative;
+  z-index: 20;
 }
 
 header,
@@ -201,6 +203,7 @@ h4 {
 
 h1 {
   font-size: 2.5rem;
+  margin: 0.2rem 0;
 }
 
 h2,
