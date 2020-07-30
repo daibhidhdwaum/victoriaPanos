@@ -72,19 +72,19 @@ body {
 }
 
 /* Modal Content/Box */
-.modalContent {
+.work__modalContent {
   background-color: #fefefe;
   padding: 20px;
   border: 1px solid #888;
   width: 100%; /* Could be more or less, depending on screen size */
 }
 
-.closeContainer {
+.work__closeContainer {
   display: flex;
   justify-content: flex-end;
 }
 
-.close {
+.work__close {
   text-align: end;
   color: white;
   font-size: 2.5rem;
@@ -96,8 +96,8 @@ body {
   border-radius: 10%;
 }
 
-.close:hover,
-.close:focus {
+.work__close:hover,
+.work__close:focus {
   text-decoration: none;
   cursor: pointer;
 }
@@ -110,11 +110,11 @@ body {
   gap: 1rem;
 }
 
-.altImages img,
+/* .altImages img,
 .mainProductImage img {
   object-fit: contain;
   border: 1px solid red;
-}
+} */
 /* 
 .mainProductImage,
 .altImage {

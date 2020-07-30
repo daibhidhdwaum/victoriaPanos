@@ -352,7 +352,7 @@ portfolio.modal = () => {
   const btn = $(".galleryImageContainer");
 
   // Get the <span> element that closes the modal
-  const span = $(".close");
+  const span = $(".work__close");
 
   // When the user clicks on the button, open the modal
   btn.on("click", () => {
