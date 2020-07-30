@@ -57,13 +57,14 @@ body {
   position: fixed; /* Stay in place */
   z-index: 30; /* Sit on top */
   padding: 2rem;
-  margin: 3% auto;
+  /* margin: 3% auto; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%; /* Full width */
-  max-width: 80rem;
+  max-width: 110rem;
   height: calc(80% - 6%); /* Full height */
+  height: 100%;
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.8);
@@ -116,9 +117,9 @@ body {
   border: 1px solid red;
 }
 
-.altImages,
-.mainProductImage {
-  object-fit: contain;
+.mainProductImage,
+.altImage {
+  max-height: 30rem;
 }
 
 .altImage img {
