@@ -450,7 +450,7 @@ button:hover {
 }
 
 /* footer */
-footer {
+.footer {
   height: 15rem;
   padding: 2.5rem 0 1rem;
   justify-content: space-between;
@@ -458,19 +458,22 @@ footer {
   flex-direction: column;
 }
 
-footer ul {
+.footer__socialLinksList {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
   max-width: 50rem;
 }
 
-footer ul li {
+.footer__socialLink {
   color: rgb(230, 230, 240);
+}
+
+.footer__socialLink a {
   font-size: 3rem;
 }
 
-footer p {
+.footer__copy {
   text-align: center;
   padding: 1rem 0;
 }
