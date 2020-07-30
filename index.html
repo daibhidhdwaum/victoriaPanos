@@ -15,166 +15,168 @@
 </head>
 
 <body>
-    <header>
-        <div class="headerContainer">
-            <div class="wrapper">
-                <div class="logo">
-                    <div class="imageContainer vpLogo">
-                        <img src="./assets/images/me/vpwordmarkw-01.png" alt="Victoria Panos Logo">
+    <div class="bodyWrapper">
+        <header>
+            <div class="headerContainer">
+                <div class="wrapper">
+                    <div class="logo">
+                        <div class="imageContainer vpLogo">
+                            <img src="./assets/images/me/vpwordmarkw-01.png" alt="Victoria Panos Logo">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <nav>
-        <div class="wrapper">
-            <div class="menuContainer">
-                <div class="vpInfo">
-                    <h1>Victoria Panos</h1>
-                    <h2>Illustration & Graphic Design</h2>
-                </div>
-                <ul class="burger">
-                    <li class="line1"></li>
-                    <li class="line2"></li>
-                    <li class="line3"></li>
-                </ul>
-                <ul class="navbar">
-                    <li>
-                        <p>
-                            <a href="#work">Work</a>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <a href="#about">About</a>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <a href="#contact">Contact</a>
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- HEADER ENDS -->
-
-    <main>
-        <section id="work">
+        </header>
+        <nav>
             <div class="wrapper">
-
-                <h3>Work</h3>
-
-                <div class="gallery">
-                    <!-- GALLERY IMAGES WILL DISPLAY HERE -->
+                <div class="menuContainer">
+                    <div class="vpInfo">
+                        <h1>Victoria Panos</h1>
+                        <h2>Illustration & Graphic Design</h2>
+                    </div>
+                    <ul class="burger">
+                        <li class="line1"></li>
+                        <li class="line2"></li>
+                        <li class="line3"></li>
+                    </ul>
+                    <ul class="navbar">
+                        <li>
+                            <p>
+                                <a href="#work">Work</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#about">About</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#contact">Contact</a>
+                            </p>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+        </nav>
+        <!-- HEADER ENDS -->
 
-                <!-- The Modal -->
-                <div id="modal" class="modal">
+        <main>
+            <section id="work">
+                <div class="wrapper">
 
-                    <!-- Modal content -->
-                    <span class="close">&times;</span>
-                    <div class="modalContent">
-                        <div class="productImages">
-                            <div class="imageContainer mainProductImage">
-                                <!-- IMAGE GOES HERE -->
+                    <h3>Work</h3>
+
+                    <div class="gallery">
+                        <!-- GALLERY IMAGES WILL DISPLAY HERE -->
+                    </div>
+
+                    <!-- The Modal -->
+                    <div id="modal" class="modal">
+
+                        <!-- Modal content -->
+                        <span class="close">&times;</span>
+                        <div class="modalContent">
+                            <div class="productImages">
+                                <div class="imageContainer mainProductImage">
+                                    <!-- IMAGE GOES HERE -->
+                                </div>
+                                <div class="altImages">
+                                    <!-- ALT IMAGES HERE -->
+                                </div>
                             </div>
-                            <div class="altImages">
-                                <!-- ALT IMAGES HERE -->
+                            <div class="modalWrittenContent">
+                                <!-- WRITTEN INFO HERE -->
                             </div>
                         </div>
-                        <div class="modalWrittenContent">
-                            <!-- WRITTEN INFO HERE -->
-                        </div>
-                    </div>
 
-                </div>
-            </div>
-        </section>
-        <!-- WORK SECTION ENDS -->
-
-        <section id="about">
-            <div class="wrapper">
-                <div class="sectionContent">
-                    <div class="imageContainer">
-                        <div class="pageHeroImage aboutMeHero">
-                            <img src="./assets/images/me/drawingTable.jpg"
-                                alt="Illustration of Victoria Panos working at her drawing desk">
-                        </div>
-                    </div>
-                    <div class="writtenContent aboutMeWrittenContent">
-                        <h3>About Me</h3>
-                        <p>
-                            Victoria Panos is an illustrator and designer born and raised in Toronto. She loves the
-                            tactile
-                            aspects
-                            of
-                            traditional
-                            art, and enjoys blending that with the versatility of digital media. In addition to graphic
-                            work,
-                            she
-                            also
-                            designs
-                            apparel and hats, and directs the country's hottest handbell ensemble.
-                        </p>
-                        <br>
-                        <p>
-                            She lives in the east end with two large cats and a small dog.
-                        </p>
-                    </div>
-
-
-                </div>
-            </div>
-        </section>
-        <!-- ABOUT SECTION ENDS -->
-
-        <section id="contact">
-            <div class="wrapper">
-                <div class="sectionContent">
-                    <div class="imageContainer">
-                        <div class="pageHeroImage contactHero">
-                            <img src="./assets/images/me/cardFace.jpg" alt="Playing card illustration">
-                        </div>
-                    </div>
-                    <div class="writtenContent contactWrittenContent">
-                        <h3>Contact</h3>
-
-                        <p>Have a question? Want to say hello? Send a message!</p>
-
-                        <form action="https://formspree.io/xlepopey" method="POST">
-
-                            <label for="name">
-                                <p>Name</p>
-                                <input type="text" name="name" id="name" class="formName" required>
-                            </label>
-                            <label for="_replyto">
-                                <p>Email</p>
-                                <input type="text" name="_replyto" id="_replyto" class="formEmail" required>
-                            </label>
-                            <label for="message" class="formMessage">
-                                <p>Message</p>
-                                <textarea name="message" id="message" required></textarea>
-                            </label>
-                            <button type="submit" class="subButton">Send</button>
-                        </form>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <!-- WORK SECTION ENDS -->
 
-    </main>
-    <footer>
-        <ul>
-            <li><i class="fab fa-linkedin-in"></i></li>
-            <li><i class="fab fa-instagram"></i></li>
-            <li><i class="fab fa-twitter"></i></li>
-            <li><i class="fab fa-facebook-f"></i></li>
-        </ul>
-        <p>&copy;Victoria Panos 2020</p>
-    </footer>
+            <section id="about">
+                <div class="wrapper">
+                    <div class="sectionContent">
+                        <div class="imageContainer">
+                            <div class="pageHeroImage aboutMeHero">
+                                <img src="./assets/images/me/drawingTable.jpg"
+                                    alt="Illustration of Victoria Panos working at her drawing desk">
+                            </div>
+                        </div>
+                        <div class="writtenContent aboutMeWrittenContent">
+                            <h3>About Me</h3>
+                            <p>
+                                Victoria Panos is an illustrator and designer born and raised in Toronto. She loves the
+                                tactile
+                                aspects
+                                of
+                                traditional
+                                art, and enjoys blending that with the versatility of digital media. In addition to
+                                graphic
+                                work,
+                                she
+                                also
+                                designs
+                                apparel and hats, and directs the country's hottest handbell ensemble.
+                            </p>
+                            <br>
+                            <p>
+                                She lives in the east end with two large cats and a small dog.
+                            </p>
+                        </div>
 
+
+                    </div>
+                </div>
+            </section>
+            <!-- ABOUT SECTION ENDS -->
+
+            <section id="contact">
+                <div class="wrapper">
+                    <div class="sectionContent">
+                        <div class="imageContainer">
+                            <div class="pageHeroImage contactHero">
+                                <img src="./assets/images/me/cardFace.jpg" alt="Playing card illustration">
+                            </div>
+                        </div>
+                        <div class="writtenContent contactWrittenContent">
+                            <h3>Contact</h3>
+
+                            <p>Have a question? Want to say hello? Send a message!</p>
+
+                            <form action="https://formspree.io/xlepopey" method="POST">
+
+                                <label for="name">
+                                    <p>Name</p>
+                                    <input type="text" name="name" id="name" class="formName" required>
+                                </label>
+                                <label for="_replyto">
+                                    <p>Email</p>
+                                    <input type="text" name="_replyto" id="_replyto" class="formEmail" required>
+                                </label>
+                                <label for="message" class="formMessage">
+                                    <p>Message</p>
+                                    <textarea name="message" id="message" required></textarea>
+                                </label>
+                                <button type="submit" class="subButton">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer>
+            <ul>
+                <li><i class="fab fa-linkedin-in"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-facebook-f"></i></li>
+            </ul>
+            <p>&copy;Victoria Panos 2020</p>
+        </footer>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"
         integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
     <script src="./assets/javascript/app.js"></script>
