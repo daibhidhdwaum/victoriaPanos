@@ -269,41 +269,30 @@ portfolio.smoothScroll = () => {
     });
 };
 
-// LOOP OVER AND DISPLAY ALTERNATIVE IMAGES
-portfolio.altImageLoop = (src) => {
-  const altImageArray = [];
+// DISPLAY MAIN IMAGES ON PAGE
+portfolio.galleryDisplay = () => {
+  const images = portfolio.galleryImages;
+  // LOOP OVER THE IMAGES IN THE ARRAY AND APPEND
+  for (let i = 0; i < images.length; i++) {
+    $(".work__gallery").append(`
+    <div class="galleryImageContainer">
+      <img src=${images[i].mainGalleryImage.src} alt=${images[i].alt} class="galleryImage" />
+      <div class="galleryHover" id=${images[i].id}>
+        <div class="imageInfoContainer">
+          <div class="imageInfo">
+            <h4>${images[i].name}</h4>
+            <p>${images[i].description}</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  for (let i = 0; i < src.length; i++) {
-    const altImageSrc = src[i];
-    altImageArray.push(altImageSrc);
-    // APPEND IMAGES TO PAGE
-    $(".modal__altImages").append(`
-    <div class="page__imageContainer modal__altImage"">
-    <img src=${altImageSrc.src} alt=""  id=${altImageSrc.id} />
-    </div>`);
+        `);
   }
-  portfolio.changeImage(altImageArray);
+  portfolio.imageDetailsPage();
 };
 
-// CHANGE IMAGE IN MODAL
-portfolio.changeImage = (arr) => {
-  $(".modal__altImage").on("click", (e) => {
-    e.preventDefault();
-    imageID = e.target.id;
-    for (let i = 0; i < arr.length; i++) {
-      if (imageID == arr[i].id) {
-        image = arr[i];
-        $(".mainProductImage").empty().append(
-          `<div class="page__imageContainer modal__altImage">
-          <img src=${image.src} alt="" id=${image.id} />
-          </div>`
-        );
-      }
-    }
-  });
-};
-
-// DISPLAY SELECTED IMAGE FROM MAIN GALLERY DETAILS
+// DISPLAY DETAILS OF IMAGE THAT HAS BEEN CLICKED FROM MAIN GALLERY
 portfolio.imageDetailsPage = () => {
   // GRAB ID OF IMAGE THAT HAS BEEN CLICKED
   $(".galleryImageContainer").on("click", (e) => {
@@ -335,8 +324,11 @@ portfolio.imageDetailsPage = () => {
     }
 
     // APPEND THE GATHERED INFO
-    $(".mainProductImage").append(`<img src=${mainImage} alt="" />`);
-    portfolio.altImageLoop(src);
+    $(".modal__mainProductImage").append(
+      `<img src=${mainImage} alt="${alt}" />`
+    );
+
+    portfolio.alternativeImages(src);
     $(".modal__writtenContent").append(
       `<h4>${name}</h4>
       <h5>${description}</h5>
@@ -357,13 +349,12 @@ portfolio.modal = () => {
   // When the user clicks on the button, open the modal
   btn.on("click", () => {
     modal.css("display", "block");
-    console.log("hello");
   });
 
   // When the user clicks on <span> (x), close the modal
   span.on("click", () => {
     modal.css("display", "none");
-    $(".mainProductImage").empty();
+    $(".modal__mainProductImage").empty();
     $(".modal__altImages").empty();
     $(".modal__writtenContent").empty();
   });
@@ -372,43 +363,63 @@ portfolio.modal = () => {
   $("window").on("click", (e) => {
     if (event.target == modal) {
       modal.css("display", "none");
-      $(".mainProductImage").empty();
+      $(".modal__mainProductImage").empty();
       $(".modal__altImages").empty();
       $(".modal__writtenContent").empty();
     }
   });
 };
 
-// DISPLAY MAIN IMAGES ON PAGE
-portfolio.galleryDisplay = () => {
-  const images = portfolio.galleryImages;
-  // LOOP OVER THE IMAGES IN THE ARRAY AND APPEND
-  for (let i = 0; i < images.length; i++) {
-    $(".work__gallery").append(`
-    <div class="galleryImageContainer">
-      <img src=${images[i].mainGalleryImage.src} alt=${images[i].alt} class="galleryImage" />
-      <div class="galleryHover" id=${images[i].id}>
-        <div class="imageInfoContainer">
-          <div class="imageInfo">
-            <h4>${images[i].name}</h4>
-            <p>${images[i].description}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+// LOOP OVER AND DISPLAY ALTERNATIVE IMAGES
+portfolio.alternativeImages = (src) => {
+  const altImageArray = [];
 
-        `);
+  for (let i = 0; i < src.length; i++) {
+    const altImageSrc = src[i];
+    altImageArray.push(altImageSrc);
   }
-  portfolio.imageDetailsPage();
+
+  // APPEND IMAGES TO PAGE
+  if (!(altImageArray.length > 1)) {
+    $(".modal__altImages").hide();
+  } else {
+    altImageArray.forEach((image) => {
+      $(".modal__altImages").append(`
+      <div class="page__imageContainer modal__altImage"">
+      <img src=${image.src} alt="${image.alt}"  id=${image.id} />
+      </div>`);
+    });
+    $(".modal__altImages").show();
+  }
+
+  portfolio.changeImage(altImageArray);
+};
+
+// CHANGE IMAGE IN MODAL
+portfolio.changeImage = (arr) => {
+  $(".modal__altImage").on("click", (e) => {
+    e.preventDefault();
+    imageID = e.target.id;
+    for (let i = 0; i < arr.length; i++) {
+      if (imageID == arr[i].id) {
+        image = arr[i];
+        $(".modal__mainProductImage").empty().append(
+          `<div class="page__imageContainer modal__altImage">
+          <img src=${image.src} alt="" id=${image.id} />
+          </div>`
+        );
+      }
+    }
+  });
 };
 
 portfolio.init = () => {
-  portfolio.galleryDisplay();
+  portfolio.smoothScroll();
   portfolio.navSlide();
+  portfolio.galleryDisplay();
   portfolio.modal();
 };
 
 $(() => {
   portfolio.init();
-  portfolio.smoothScroll();
 });
