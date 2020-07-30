@@ -277,8 +277,8 @@ portfolio.altImageLoop = (src) => {
     const altImageSrc = src[i];
     altImageArray.push(altImageSrc);
     // APPEND IMAGES TO PAGE
-    $(".work__altImages").append(`
-    <div class="page__imageContainer work__altImage"">
+    $(".modal__altImages").append(`
+    <div class="page__imageContainer modal__altImage"">
     <img src=${altImageSrc.src} alt=""  id=${altImageSrc.id} />
     </div>`);
   }
@@ -287,14 +287,14 @@ portfolio.altImageLoop = (src) => {
 
 // CHANGE IMAGE IN MODAL
 portfolio.changeImage = (arr) => {
-  $(".work__altImage").on("click", (e) => {
+  $(".modal__altImage").on("click", (e) => {
     e.preventDefault();
     imageID = e.target.id;
     for (let i = 0; i < arr.length; i++) {
       if (imageID == arr[i].id) {
         image = arr[i];
         $(".mainProductImage").empty().append(
-          `<div class="page__imageContainer work__altImage">
+          `<div class="page__imageContainer modal__altImage">
           <img src=${image.src} alt="" id=${image.id} />
           </div>`
         );
@@ -337,7 +337,7 @@ portfolio.imageDetailsPage = () => {
     // APPEND THE GATHERED INFO
     $(".mainProductImage").append(`<img src=${mainImage} alt="" />`);
     portfolio.altImageLoop(src);
-    $(".modalWrittenContent").append(
+    $(".modal__writtenContent").append(
       `<h4>${name}</h4>
       <h5>${description}</h5>
       <div>${detail}</div>`
@@ -352,19 +352,20 @@ portfolio.modal = () => {
   const btn = $(".galleryImageContainer");
 
   // Get the <span> element that closes the modal
-  const span = $(".work__close");
+  const span = $(".modal__close");
 
   // When the user clicks on the button, open the modal
   btn.on("click", () => {
     modal.css("display", "block");
+    console.log("hello");
   });
 
   // When the user clicks on <span> (x), close the modal
   span.on("click", () => {
     modal.css("display", "none");
     $(".mainProductImage").empty();
-    $(".work__altImages").empty();
-    $(".modalWrittenContent").empty();
+    $(".modal__altImages").empty();
+    $(".modal__writtenContent").empty();
   });
 
   // wHEN THE USER CLICKS OUTSIDE THE MODAL, CLOSE
@@ -372,8 +373,8 @@ portfolio.modal = () => {
     if (event.target == modal) {
       modal.css("display", "none");
       $(".mainProductImage").empty();
-      $(".work__altImages").empty();
-      $(".modalWrittenContent").empty();
+      $(".modal__altImages").empty();
+      $(".modal__writtenContent").empty();
     }
   });
 };
@@ -383,7 +384,6 @@ portfolio.galleryDisplay = () => {
   const images = portfolio.galleryImages;
   // LOOP OVER THE IMAGES IN THE ARRAY AND APPEND
   for (let i = 0; i < images.length; i++) {
-    console.log(images[i]);
     $(".work__gallery").append(`
     <div class="galleryImageContainer">
       <img src=${images[i].mainGalleryImage.src} alt=${images[i].alt} class="galleryImage" />
