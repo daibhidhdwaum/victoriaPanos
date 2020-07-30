@@ -280,8 +280,8 @@ portfolio.altImageLoop = (src) => {
     altImageArray.push(altImageSrc);
     // APPEND IMAGES TO PAGE
     $(".altImages").append(`
-    <div class="imageContainer">
-    <img src=${altImageSrc.src} alt="" class="altImage" id=${altImageSrc.id} />
+    <div class="imageContainer altImage"">
+    <img src=${altImageSrc.src} alt=""  id=${altImageSrc.id} />
     </div>`);
   }
   portfolio.changeImage(altImageArray);
@@ -296,8 +296,8 @@ portfolio.changeImage = (arr) => {
       if (imageID == arr[i].id) {
         image = arr[i];
         $(".mainProductImage").empty().append(
-          `<div class="imageContainer">
-          <img src=${image.src} alt="" class="altImage" id=${image.id} />
+          `<div class="imageContainer altImage">
+          <img src=${image.src} alt="" id=${image.id} />
           </div>`
         );
       }

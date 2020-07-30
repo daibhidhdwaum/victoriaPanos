@@ -112,13 +112,20 @@ body {
 
 .altImages img,
 .mainProductImage img {
-  object-fit: scale-down;
+  object-fit: contain;
+  border: 1px solid red;
 }
 
-.altImage,
+.altImage img {
+  border: 3px solid green;
+  width: 100%;
+  height: auto;
+}
+
+/* .altImage,
 .mainProductImage {
   object-fit: cover;
-}
+} */
 
 .altImages:hover {
   cursor: pointer;
