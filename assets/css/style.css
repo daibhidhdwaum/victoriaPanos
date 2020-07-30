@@ -119,7 +119,7 @@ body {
 
 .mainProductImage,
 .altImage {
-  max-height: 30rem;
+  max-height: 100%;
 }
 
 .altImage img {

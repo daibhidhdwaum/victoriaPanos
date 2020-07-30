@@ -29,7 +29,7 @@ portfolio.galleryImages = [
     image: [
       {
         id: 0,
-        src: `./assets/images/illustration/cabrioleSquare.jpg`,
+        src: `./assets/images/illustration/cabriole.jpg`,
         alt: "",
       },
     ],
@@ -44,9 +44,7 @@ portfolio.galleryImages = [
       src: `./assets/images/square/chihuahua.jpg`,
       alt: "",
     },
-    image: [
-      { id: 0, src: `./assets/images/infographic/chihuahua.jpg`, alt: "" },
-    ],
+    image: [{ id: 0, src: `./assets/images/square/chihuahua.jpg`, alt: "" }],
     alt: "",
     detail: "",
   },
@@ -407,10 +405,10 @@ portfolio.galleryDisplay = () => {
 portfolio.init = () => {
   portfolio.galleryDisplay();
   portfolio.navSlide();
-  portfolio.smoothScroll();
   portfolio.modal();
 };
 
 $(() => {
   portfolio.init();
+  portfolio.smoothScroll();
 });
