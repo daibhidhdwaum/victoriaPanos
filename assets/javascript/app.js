@@ -5,10 +5,14 @@ portfolio.galleryImages = [
     id: 1,
     name: "Burleque Quarterly",
     description: "Editorial design",
+    mainGalleryImage: {
+      id: 0,
+      src: `./assets/images/square/bqSquare.jpg`,
+      alt: "",
+    },
     image: [
-      { id: 0, src: `./assets/images/square/bqSquare.jpg`, alt: "" },
-      { id: 1, src: `./assets/images/bq/bqCover.jpg`, alt: "" },
-      { id: 2, src: `./assets/images/bq/bqMagazine.jpg`, alt: "" },
+      { id: 0, src: `./assets/images/bq/bqCover.jpg`, alt: "" },
+      { id: 1, src: `./assets/images/bq/bqMagazine.jpg`, alt: "" },
     ],
     detail:
       "<p>Magazine design and art direction.</p><p> Photography by Van Habon, models Loretta Jean and Henrietta VIII</p>",
@@ -17,8 +21,17 @@ portfolio.galleryImages = [
     id: 2,
     name: "Cabriole",
     description: "Art nouveau poster",
+    mainGalleryImage: {
+      id: 0,
+      src: `./assets/images/square/cabrioleSquare.jpg`,
+      alt: "",
+    },
     image: [
-      { id: 0, src: `./assets/images/square/cabrioleSquare.jpg`, alt: "" },
+      {
+        id: 0,
+        src: `./assets/images/illustration/cabrioleSquare.jpg`,
+        alt: "",
+      },
     ],
     detail: "",
   },
@@ -26,7 +39,14 @@ portfolio.galleryImages = [
     id: 3,
     name: "Chihuahua",
     description: "Infographic",
-    image: [{ id: 0, src: `./assets/images/square/chihuahua.jpg`, alt: "" }],
+    mainGalleryImage: {
+      id: 0,
+      src: `./assets/images/square/chihuahua.jpg`,
+      alt: "",
+    },
+    image: [
+      { id: 0, src: `./assets/images/infographic/chihuahua.jpg`, alt: "" },
+    ],
     alt: "",
     detail: "",
   },
@@ -34,8 +54,17 @@ portfolio.galleryImages = [
     id: 4,
     name: "The Colour of Magic",
     description: "Book cover design",
+    mainGalleryImage: {
+      id: 0,
+      src: `./assets/images/square/colourOfMagicSquare.jpg`,
+      alt: "",
+    },
     image: [
-      { id: 0, src: `./assets/images/square/colourOfMagicSquare.jpg`, alt: "" },
+      {
+        id: 0,
+        src: `./assets/images/discworld/colourOfMagic.jpg`,
+        alt: "",
+      },
     ],
     detail: "",
   },
@@ -43,8 +72,18 @@ portfolio.galleryImages = [
     id: 5,
     name: "The Etomology of Entomology",
     description: "Book design",
+    mainGalleryImage: {
+      id: 0,
+      src: `./assets/images/square/entomologySquare.jpg`,
+      alt: "",
+    },
     image: [
-      { id: 0, src: `./assets/images/square/entomologySquare.jpg`, alt: "" },
+      { id: 0, src: `./assets/images/entomology/entomologyCover.jpg`, alt: "" },
+      {
+        id: 1,
+        src: `./assets/images/entomology/entomologyInside.jpg`,
+        alt: "",
+      },
     ],
     detail: "<p>A new cover design for a classic novel.</p>",
   },
@@ -52,13 +91,22 @@ portfolio.galleryImages = [
     id: 6,
     name: "March Hare",
     description: "Branding and package design",
+    mainGalleryImage: {
+      id: 0,
+      src: `./assets/images/square/marchSquare.jpg`,
+      alt: "alt text",
+    },
+    mainGalleryImage: {
+      id: 0,
+      src: `./assets/images/square/marchSquare.jpg`,
+      alt: "alt text",
+    },
     image: [
-      { id: 0, src: `./assets/images/square/marchSquare.jpg`, alt: "alt text" },
-      { id: 1, src: `./assets/images/marchHare/marchChai.jpg`, alt: "" },
-      { id: 2, src: `./assets/images/marchHare/marchEarlGrey.jpg`, alt: "" },
-      { id: 3, src: `./assets/images/marchHare/marchGreen.jpg`, alt: "" },
-      { id: 4, src: `./assets/images/marchHare/marchRooibos.jpg`, alt: "" },
-      { id: 5, src: `./assets/images/marchHare/marchHareMockup.jpg`, alt: "" },
+      { id: 0, src: `./assets/images/marchHare/marchChai.jpg`, alt: "" },
+      { id: 1, src: `./assets/images/marchHare/marchEarlGrey.jpg`, alt: "" },
+      { id: 2, src: `./assets/images/marchHare/marchGreen.jpg`, alt: "" },
+      { id: 3, src: `./assets/images/marchHare/marchRooibos.jpg`, alt: "" },
+      { id: 4, src: `./assets/images/marchHare/marchHareMockup.jpg`, alt: "" },
     ],
     alt: "",
     detail:
@@ -68,8 +116,13 @@ portfolio.galleryImages = [
     id: 7,
     name: "Saturnalia",
     description: "Event poster",
+    mainGalleryImage: {
+      id: 0,
+      src: `./assets/images/square/saturnaliaSquare.jpg`,
+      alt: "",
+    },
     image: [
-      { id: 0, src: `./assets/images/square/saturnaliaSquare.jpg`, alt: "" },
+      { id: 0, src: `./assets/images/illustration/saturnalia.jpg`, alt: "" },
     ],
     detail:
       "<p>A hand-illustrated poster inspired by the Art Nouveau movement.</p><p>Model: Loretta Jean.</p>",
@@ -78,17 +131,26 @@ portfolio.galleryImages = [
     id: 8,
     name: "Sirensong",
     description: "Illustration",
-    image: [{ id: 0, src: `./assets/images/square/sirenSquare.jpg`, alt: "" }],
+    mainGalleryImage: {
+      id: 0,
+      src: `./assets/images/square/sirenSquare.jpg`,
+      alt: "",
+    },
+    image: [{ id: 0, src: `./assets/images/illustration/siren.jpg`, alt: "" }],
     detail: "",
   },
   {
     id: 9,
     name: "Soaperific",
     description: "Logo and label design",
+    mainGalleryImage: {
+      id: 0,
+      src: `./assets/images/square/soaperificJarSquare.jpg`,
+      alt: "",
+    },
     image: [
-      { id: 0, src: `./assets/images/square/soaperificJarSquare.jpg`, alt: "" },
-      { id: 1, src: `./assets/images/soaperific/soaperificJar.jpg`, alt: "" },
-      { id: 2, src: `./assets/images/soaperific/soaperificLogo.png`, alt: "" },
+      { id: 0, src: `./assets/images/soaperific/soaperificJar.jpg`, alt: "" },
+      { id: 1, src: `./assets/images/soaperific/soaperificLogo.png`, alt: "" },
     ],
     detail: "Design for an independent skincare company.",
   },
@@ -96,13 +158,17 @@ portfolio.galleryImages = [
     id: 10,
     name: "Sparrow Queen Tarot",
     description: "Logo and branding",
+    mainGalleryImage: {
+      id: 0,
+      src: `./assets/images/square/sparrow.jpg`,
+      alt: "",
+    },
     image: [
-      { id: 0, src: `./assets/images/square/sparrow.jpg`, alt: "" },
-      { id: 1, src: `./assets/images/sparrow/sparrowqueenMockup.jpg`, alt: "" },
-      { id: 2, src: `./assets/images/sparrow/sqCoa.jpg`, alt: "" },
-      { id: 3, src: `./assets/images/sparrow/sqEnamel.png`, alt: "" },
-      { id: 4, src: `./assets/images/sparrow/sqEordmark.jpg`, alt: "" },
-      { id: 5, src: `./assets/images/sparrow/sqTote.jpg`, alt: "" },
+      { id: 0, src: `./assets/images/sparrow/sparrowqueenMockup.jpg`, alt: "" },
+      { id: 1, src: `./assets/images/sparrow/sqCoa.jpg`, alt: "" },
+      { id: 2, src: `./assets/images/sparrow/sqEnamel.png`, alt: "" },
+      { id: 3, src: `./assets/images/sparrow/sqEordmark.jpg`, alt: "" },
+      { id: 4, src: `./assets/images/sparrow/sqTote.jpg`, alt: "" },
     ],
     detail:
       '<p>Logo and branding for a personal tarot reading service.</p><p>Hand-drawn "coat of arms" version plus wordmark with hand-crafted typeface.</p>',
@@ -111,21 +177,34 @@ portfolio.galleryImages = [
     id: 11,
     name: "Stupid Buck",
     description: "Illustration",
-    image: [{ id: 0, src: `./assets/images/square/ysfdeerSquare.jpg`, id: "" }],
+    mainGalleryImage: {
+      id: 0,
+      src: `./assets/images/square/ysfdeerSquare.jpg`,
+      id: "",
+    },
+    image: [
+      { id: 0, src: `./assets/images/illustration/ysfdeer.jpg`, alt: "" },
+    ],
     detail: "<p>Traditional illustration, done with markers.</p>",
   },
   {
     id: 12,
     name: "Toronto Zoo",
     description: "Billboard design",
+    mainGalleryImage: {
+      id: 0,
+      src: `./assets/images/square/zooBillboardSquare.jpg`,
+      alt: "",
+    },
     image: [
-      { id: 0, src: `./assets/images/square/zooBillboardSquare.jpg`, alt: "" },
-      { id: 1, src: `./assets/images/ad/zooBillboard.jpg`, alt: "" },
-      { id: 2, src: `./assets/images/ad/zooBus.jpg`, alt: "" },
+      { id: 0, src: `./assets/images/ad/zooBillboard.jpg`, alt: "" },
+      { id: 1, src: `./assets/images/ad/zooBus.jpg`, alt: "" },
     ],
     detail: "",
   },
 ];
+
+//  *********** DO NOT CHANGE ANYTHING BELOW THIS LINE *************
 
 // NAVIGATION SLIDER
 portfolio.navSlide = () => {
@@ -159,7 +238,7 @@ portfolio.smoothScroll = () => {
         // Figure out element to scroll to
         let target = $(this.hash);
         // GET HEIGHT OF FIXED HEADER TO SET PAGE OFFSET
-        const headerHeight = $("header").height();
+        const headerHeight = $("nav").height();
 
         target = target.length
           ? target
@@ -306,9 +385,10 @@ portfolio.galleryDisplay = () => {
   const images = portfolio.galleryImages;
   // LOOP OVER THE IMAGES IN THE ARRAY AND APPEND
   for (let i = 0; i < images.length; i++) {
+    console.log(images[i]);
     $(".gallery").append(`
     <div class="galleryImageContainer">
-      <img src=${images[i].image[0].src} alt=${images[i].alt} class="galleryImage" />
+      <img src=${images[i].mainGalleryImage.src} alt=${images[i].alt} class="galleryImage" />
       <div class="galleryHover" id=${images[i].id}>
         <div class="imageInfoContainer">
           <div class="imageInfo">
