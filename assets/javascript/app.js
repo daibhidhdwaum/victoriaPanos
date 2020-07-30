@@ -33,7 +33,7 @@ portfolio.galleryImages = [
         alt: "",
       },
     ],
-    detail: "",
+    detail: "<p></p>",
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ portfolio.galleryImages = [
     },
     image: [{ id: 0, src: `./assets/images/square/chihuahua.jpg`, alt: "" }],
     alt: "",
-    detail: "",
+    detail: "<p></p>",
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ portfolio.galleryImages = [
         alt: "",
       },
     ],
-    detail: "",
+    detail: "<p></p>",
   },
   {
     id: 5,
@@ -135,7 +135,7 @@ portfolio.galleryImages = [
       alt: "",
     },
     image: [{ id: 0, src: `./assets/images/illustration/siren.jpg`, alt: "" }],
-    detail: "",
+    detail: "<p></p>",
   },
   {
     id: 9,
@@ -150,7 +150,7 @@ portfolio.galleryImages = [
       { id: 0, src: `./assets/images/soaperific/soaperificJar.jpg`, alt: "" },
       { id: 1, src: `./assets/images/soaperific/soaperificLogo.png`, alt: "" },
     ],
-    detail: "Design for an independent skincare company.",
+    detail: "<p>Design for an independent skincare company.</p>",
   },
   {
     id: 10,
@@ -198,7 +198,7 @@ portfolio.galleryImages = [
       { id: 0, src: `./assets/images/ad/zooBillboard.jpg`, alt: "" },
       { id: 1, src: `./assets/images/ad/zooBus.jpg`, alt: "" },
     ],
-    detail: "",
+    detail: "<p>Bus and billboard ads for Toronto Zoo</p>",
   },
 ];
 
