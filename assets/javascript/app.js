@@ -278,7 +278,7 @@ portfolio.altImageLoop = (src) => {
     altImageArray.push(altImageSrc);
     // APPEND IMAGES TO PAGE
     $(".work__altImages").append(`
-    <div class="page__imageContainer altImage"">
+    <div class="page__imageContainer work__altImage"">
     <img src=${altImageSrc.src} alt=""  id=${altImageSrc.id} />
     </div>`);
   }
@@ -287,14 +287,14 @@ portfolio.altImageLoop = (src) => {
 
 // CHANGE IMAGE IN MODAL
 portfolio.changeImage = (arr) => {
-  $(".altImage").on("click", (e) => {
+  $(".work__altImage").on("click", (e) => {
     e.preventDefault();
     imageID = e.target.id;
     for (let i = 0; i < arr.length; i++) {
       if (imageID == arr[i].id) {
         image = arr[i];
         $(".mainProductImage").empty().append(
-          `<div class="page__imageContainer altImage">
+          `<div class="page__imageContainer work__altImage">
           <img src=${image.src} alt="" id=${image.id} />
           </div>`
         );
@@ -363,7 +363,7 @@ portfolio.modal = () => {
   span.on("click", () => {
     modal.css("display", "none");
     $(".mainProductImage").empty();
-    $(".altImages").empty();
+    $(".work__altImages").empty();
     $(".modalWrittenContent").empty();
   });
 
@@ -372,7 +372,7 @@ portfolio.modal = () => {
     if (event.target == modal) {
       modal.css("display", "none");
       $(".mainProductImage").empty();
-      $(".altImages").empty();
+      $(".work__altImages").empty();
       $(".modalWrittenContent").empty();
     }
   });
