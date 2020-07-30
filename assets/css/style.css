@@ -112,7 +112,7 @@ body {
 
 .altImages img,
 .mainProductImage img {
-  object-fit: cover;
+  object-fit: scale-down;
 }
 
 .altImages:hover {
