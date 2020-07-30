@@ -52,7 +52,7 @@ body {
 /* MODAL */
 
 /* The Modal (background) */
-.modal {
+.work__modal {
   display: none;
   position: fixed; /* Stay in place */
   z-index: 30; /* Sit on top */
@@ -79,12 +79,11 @@ body {
   width: 100%; /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button */
-
 .closeContainer {
   display: flex;
   justify-content: flex-end;
 }
+
 .close {
   text-align: end;
   color: white;
@@ -158,21 +157,21 @@ header {
   margin: 0;
 }
 
-.navbar {
+.header__vpLogo {
+  max-width: 17.5rem;
+  max-height: 18rem;
+  margin: 1.5rem 0;
+}
+
+.nav__navbar {
   position: absolute;
   width: 100%;
   display: none;
 }
 
-.logo {
+.header__logoContainer {
   display: flex;
   justify-content: center;
-}
-
-header .vpLogo {
-  max-width: 17.5rem;
-  max-height: 18rem;
-  margin: 1.5rem 0;
 }
 
 section {
@@ -187,11 +186,18 @@ section:nth-child(even) {
   background-color: #fff;
   padding: 5% 0;
 }
-
+/* 
 .imageContainer {
   width: 100%;
   display: flex;
   justify-content: center;
+  
+} */
+
+.imageContainer > img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
 .pageHeroImage {
@@ -228,8 +234,8 @@ h4 {
   font-family: "Playfair Display", serif;
 }
 
-.navbar a,
-.burger,
+.nav__navbar a,
+.nav__burger,
 .galleryHover:hover {
   cursor: pointer;
 }
@@ -250,7 +256,7 @@ h3 {
   font-weight: 500;
 }
 
-.burger li {
+.nav__burger li {
   width: 2.5rem;
   height: 0.2rem;
   margin: 0.5rem;
@@ -265,7 +271,7 @@ nav {
   z-index: 30;
 }
 
-.menuContainer {
+.nav__menuContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -274,11 +280,11 @@ nav {
   height: 12vh;
 }
 
-.burger {
+.nav__burger {
   width: 3.8rem;
 }
 
-.navbar {
+.nav__navbar {
   top: 12vh;
   left: 0;
   width: 100%;
@@ -287,13 +293,13 @@ nav {
   transition: transform 0.5s ease-in;
 }
 
-.navbar li {
+.nav__navbar li {
   text-align: center;
   width: 100%;
   height: 100%;
 }
 
-.navbar li a {
+.nav__navbar li a {
   display: inline-block;
   color: black;
   width: 100%;
@@ -302,12 +308,12 @@ nav {
   border: 1px solid rgba(230, 230, 240, 1);
 }
 
-.navbar li a:hover,
-.navbar li a:focus-within {
+.nav__navbar li a:hover,
+.nav__navbar li a:focus-within {
   border: 1px solid #143857;
 }
 
-.navbarActive {
+.nav__navbarActive {
   transform: translateX(0);
   display: block;
 }
@@ -330,7 +336,7 @@ p {
 
 /* gallery */
 
-.gallery {
+.work__gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
@@ -524,7 +530,7 @@ footer p {
     border: 1px solid rgb(230, 230, 240);
   }
 
-  .burger {
+  .nav__burger {
     display: none;
   }
 
@@ -540,7 +546,7 @@ footer p {
     width: 40%;
   }
 
-  .modal .imageContainer {
+  .work__modal .imageContainer {
     width: 100%;
   }
 

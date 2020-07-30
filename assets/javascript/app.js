@@ -206,16 +206,16 @@ portfolio.galleryImages = [
 
 // NAVIGATION SLIDER
 portfolio.navSlide = () => {
-  const burger = $(".burger");
-  const nav = $(".navbar");
-  const li = $(".navbar li");
+  const burger = $(".nav__burger");
+  const nav = $(".nav__navbar");
+  const li = $(".nav__navbar li");
 
   burger.on("click", () => {
-    nav.toggleClass("navbarActive");
+    nav.toggleClass("nav__navbarActive");
   });
 
   li.on("click", () => {
-    nav.removeClass("navbarActive");
+    nav.removeClass("nav__navbarActive");
   });
 };
 
@@ -384,7 +384,7 @@ portfolio.galleryDisplay = () => {
   // LOOP OVER THE IMAGES IN THE ARRAY AND APPEND
   for (let i = 0; i < images.length; i++) {
     console.log(images[i]);
-    $(".gallery").append(`
+    $(".work__gallery").append(`
     <div class="galleryImageContainer">
       <img src=${images[i].mainGalleryImage.src} alt=${images[i].alt} class="galleryImage" />
       <div class="galleryHover" id=${images[i].id}>
