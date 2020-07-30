@@ -277,8 +277,8 @@ portfolio.altImageLoop = (src) => {
     const altImageSrc = src[i];
     altImageArray.push(altImageSrc);
     // APPEND IMAGES TO PAGE
-    $(".altImages").append(`
-    <div class="imageContainer altImage"">
+    $(".work__altImages").append(`
+    <div class="page__imageContainer altImage"">
     <img src=${altImageSrc.src} alt=""  id=${altImageSrc.id} />
     </div>`);
   }
@@ -294,7 +294,7 @@ portfolio.changeImage = (arr) => {
       if (imageID == arr[i].id) {
         image = arr[i];
         $(".mainProductImage").empty().append(
-          `<div class="imageContainer altImage">
+          `<div class="page__imageContainer altImage">
           <img src=${image.src} alt="" id=${image.id} />
           </div>`
         );
@@ -303,7 +303,7 @@ portfolio.changeImage = (arr) => {
   });
 };
 
-// DISPLAY SELECTED IMAGE DETAILS
+// DISPLAY SELECTED IMAGE FROM MAIN GALLERY DETAILS
 portfolio.imageDetailsPage = () => {
   // GRAB ID OF IMAGE THAT HAS BEEN CLICKED
   $(".galleryImageContainer").on("click", (e) => {
