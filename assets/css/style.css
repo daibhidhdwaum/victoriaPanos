@@ -102,13 +102,13 @@ body {
   cursor: pointer;
 }
 
-.altImages {
+/* .altImages {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
   margin: 1rem 0;
   gap: 1rem;
-}
+} */
 
 /* .altImages img,
 .mainProductImage img {
@@ -121,11 +121,11 @@ body {
   max-height: 100%;
 } */
 
-.altImage img {
+/* .altImage img {
   border: 3px solid green;
   width: 100%;
   height: auto;
-}
+} */
 
 /* .altImage,
 .mainProductImage {
