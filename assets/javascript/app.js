@@ -8,7 +8,7 @@ portfolio.galleryImages = [
     mainGalleryImage: {
       id: 0,
       src: `./assets/images/square/bqSquare.jpg`,
-      alt: "",
+      alt: "I am an image",
     },
     image: [
       { id: 0, src: `./assets/images/bq/bqCover.jpg`, alt: "" },
@@ -250,20 +250,6 @@ portfolio.smoothScroll = () => {
               scrollTop: target.offset().top - headerHeight,
             },
             1000
-            // ,
-            // function () {
-            //   // Callback after animation
-            //   // Must change focus!
-            //   const $target = $(target);
-            //   $target.focus();
-            //   if ($target.is(":focus")) {
-            //     // Checking if the target was focused
-            //     return false;
-            //   } else {
-            //     $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
-            //     $target.focus(); // Set focus again
-            //   }
-            // }
           );
         }
       }
